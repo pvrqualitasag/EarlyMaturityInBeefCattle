@@ -37,7 +37,8 @@ Das Merkmal `Fettabdeckung` (FA) hat eine Beziehung zur Frühreife, dadurch, das
 
 FA hat auch Abhängigkeiten zum Alter, zum Schlachtgewicht, zum Nettozuwachs und zur Fleischigkeit. Diese Abhängigkeiten müssen in einer Analyse berücksichtigt werden. 
 
-Unter der Annahme, dass wir mehrere Merkmale in einem Index zusammenfassen wollen, dann müssen die genetischen Korrelationen zwischen den Merkmalen im Index geschätzt werden. Dies geschieht in bi-variaten oder multi-variaten Analysen. In multi-variaten Analyse können aber Abhängigkeiten zwischen den Zielgrössen 
+Unter der Annahme, dass wir mehrere Merkmale in einem Index zusammenfassen wollen, dann müssen die genetischen Korrelationen zwischen den Merkmalen im Index geschätzt werden. Dies geschieht in bi-variaten oder multi-variaten Analysen. In multi-variaten Analyse können aber Abhängigkeiten zwischen den Zielgrössen nicht wirklich berücksichtigt werden, da alle Merkmale in einer multi-variaten Analyse mit dem gleichen Modell behandelt werden müssen. Konkreter heisst das, dass wenn wir einen Index mit den Merkmalen `Nettozuwachs`, `Fleischigkeit` und `Fettabdeckung` aufstellen wollen, dann müssen die Varianzkomponenten in einer multi-variaten Analyse geschätzt werden. Das Modell in dieser Analyse kann aber die Abhängigkeiten zwischen  `Nettozuwachs`, `Fleischigkeit` und `Fettabdeckung` nicht berücksichtigen.
+
 
 ### Differentielles Alter (DAGE)
 
