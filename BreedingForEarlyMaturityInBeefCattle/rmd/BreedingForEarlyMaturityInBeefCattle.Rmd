@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Einleitung
-Die aktuellen Bezahlungssysteme in Schlachthöfen sind auf optimale Schlachtgewichte und eine ausreichende Fettabdeckung der Schlachtkörper ausgerichtet. Aufgrund von wirtschaftlichen Überlegungen der Mäster sollen diese Optima möglichst wenig Aufwand erreicht werden. (Hier können auch Verweise auf Berry gemacht werden)
+Die aktuellen Bezahlungssysteme in Schlachthöfen sind auf optimale Schlachtgewichte und eine ausreichende Fettabdeckung der Schlachtkörper ausgerichtet. Aufgrund von wirtschaftlichen Überlegungen der Mäster sollen diese Optima in den Merkmalen Schlachtgewicht und Fettabdeckung mit möglichst wenig Aufwand erreicht werden. (Hier können auch Verweise auf Berry gemacht werden)
 
 
 ## Frühreife
@@ -18,7 +18,7 @@ Die aktuellen Bezahlungssysteme in Schlachthöfen sind auf optimale Schlachtgewi
 Der Begriff `Frühreife` ist nicht einfach zu definieren. Wir versuchen trotzdem den Begriff etwas genauer zu umschreiben. Tiere, welche ein durch die Schlachthöfe festgelegtes Optimum in der Fleischigkeit, dem Schlachtgewicht und der Fettabdeckung in möglichst jungem Alter erreichen, werden als frühreif bezeichnet. Konkreter, wenn die Tiere $i$ und $j$ in den Merkmalen Fleischigkeit, Schlachtgewicht und Fettabdeckung übereinstimmen und dabei Tiere $i$ das Alter $age_i$ und Tier $j$ das Alter $age_j$ hat und gilt, dass $age_i < age_j$, dann ist Tier $i$ frühreif im Vergleich zu Tier $j$. 
 
 ### Selektion
-Aufgrund der komplexen Definition des Begriffs Frühreife, eignet sich die Frühreife nicht direkt als Selektionsmerkmal für ein Zuchtprogramm. Aus diesem Grund soll ein Hilfsmerkmal für die Eigenschaft der Frühreife gefunden werden. Dieses Hilfsmerkmals soll möglichst eng mit der Frühreife korreliert sein, damit bei einer Veränderung des Hilfsmerkmals auch die Frühreife verbessert werden kann. Eine mögliche Auswahl an Hilfsmerkmalen werden wir in einem späteren Abschnitt noch diskutieren.
+Aufgrund der komplexen Definition des Begriffs Frühreife, eignet sich die Frühreife nicht direkt als Selektionsmerkmal in einem Zuchtprogramm. Aus diesem Grund soll ein Hilfsmerkmal für die Eigenschaft der Frühreife gefunden werden. Dieses Hilfsmerkmals soll möglichst eng mit der Frühreife korreliert sein, damit bei einer Veränderung des Hilfsmerkmals auch die Frühreife verbessert werden kann. Eine mögliche Auswahl an Hilfsmerkmalen werden wir in einem späteren Abschnitt noch diskutieren.
 
 
 ## Aktuelle Situation
@@ -33,11 +33,16 @@ Modelle noch etwas genauer beschreiben könntest.
 Für die gewünschte Selektion auf Frühreife sind verschiedene Hilfsmerkmale denkbar. Diese Merkmale und deren Eignung für die Selektion auf Frühreife soll hier kurz beschrieben werden.
 
 ### Fettabdeckung
-Das Merkmal `Fettabdeckung` (FA) hat eine Beziehung zur Frühreife, dadurch, dass von der Seite der Schlachthöfe ein gewisses Niveau in diesem Merkmal erwartet wird. Bei FA handelt es sich um ein Merkmal, dessen angestrebter Wert in einem gewissen als optimal definierten Bereich liegen soll. Solche Merkmalen werden auch als `Optimum-Merkmale` bezeichnet. Für die Verwendung als Selektionskriterien sind Optimum-Merkmale eher schwierig, da die Gewichtung der Merkmale vom Planungshorizont und vom Populationsmittel abhängig sind.
+Das Merkmal `Fettabdeckung` (FA) hat eine gewisse Beziehung zur Frühreife. Aufgrund der Einstufungssysteme in den Schlachthöfen wird ein gewisses Niveau in diesem Merkmal erwartet. Bei FA handelt es sich um ein Merkmal, dessen angestrebter Wert in einem gewissen als optimal definierten Bereich liegen soll. Solche Merkmale werden auch als `Optimum-Merkmale` bezeichnet. Für die Verwendung als Selektionskriterien sind Optimum-Merkmale mit gewissen Schwierigkeiten behaftet, da die Gewichtung der Merkmale vom Planungshorizont und vom Populationsmittel abhängig sind.
 
-FA hat auch Abhängigkeiten zum Alter, zum Schlachtgewicht, zum Nettozuwachs und zur Fleischigkeit. Diese Abhängigkeiten müssen in einer Analyse berücksichtigt werden. 
+FA hat auch Abhängigkeiten zum Alter, zum Schlachtgewicht (SG), zum Nettozuwachs (NZ) und zur Fleischigkeit (FK). Diese Abhängigkeiten müssen in einer statistischen Analyse, wie zum Beispiel einer Varianzkomponentenschätzung oder einer Zuchtwertschätzung, berücksichtigt werden. 
 
-Unter der Annahme, dass wir mehrere Merkmale in einem Index zusammenfassen wollen, dann müssen die genetischen Korrelationen zwischen den Merkmalen im Index geschätzt werden. Dies geschieht in bi-variaten oder multi-variaten Analysen. In multi-variaten Analyse können aber Abhängigkeiten zwischen den Zielgrössen nicht wirklich berücksichtigt werden, da alle Merkmale in einer multi-variaten Analyse mit dem gleichen Modell behandelt werden müssen. Konkreter heisst das, dass wenn wir einen Index mit den Merkmalen `Nettozuwachs`, `Fleischigkeit` und `Fettabdeckung` aufstellen wollen, dann müssen die Varianzkomponenten in einer multi-variaten Analyse geschätzt werden. Das Modell in dieser Analyse kann aber die Abhängigkeiten zwischen  `Nettozuwachs`, `Fleischigkeit` und `Fettabdeckung` nicht berücksichtigen.
+### Index
+Unter der Annahme, dass wir mehrere Merkmale, wie zum Beispiel NZ, FK und FA in einem Index zusammenfassen wollen, müssen die genetischen Korrelationen zwischen den Merkmalen im Index geschätzt werden. Dies geschieht in bi-variaten oder multi-variaten Analysen. Multi-variaten Analysen bedingen aber, dass für alle berücksichtigten Merkmale das gleiche statistische Modell verwendet wird. In multi-variaten Analysen werden die Zusammenhänge zwischen Merkmalen über die geschätzten Korrelationen berücksichtigt. Diese Korrelationen können aber immer nur lineare Beziehungen zwischen Merkmalen berücksichtigen. Die Abhängigkeiten zwischen NZ, FK und FA sind aber nicht linear und auch nicht konstant über den gesamten Wertebereich der berücksichtigten Merkmale. Somit ist die Verwendung der Fettabdeckung als zusätzliches Merkmal in einer multi-variaten Analyse keine optimale Umsetzung einer Selektionsstrategie für Frühreife. Der Hauptgrund dafür ist, dass die Abhängigkeiten zwischen NZ, FK und FA nicht korrekt berücksichtigt werden können.
+
+Aufgrund der ursprünglich formulierten Idee der Frühreife als Eigenschaft, möchten wir die Tiere selektieren, welche eine optimale Fettabdeckung und eine gute Fleischigkeit möglichst früh in ihrem Leben erreichen. Somit müsste man im statistischen Modell für NZW und FK die Fettabdeckungsklasse korrigieren. 
+
+Als Beispiel können wir also nicht für die Merkmale NZW oder FK die FA als einen fixen Effekt berücksichtigen, da wir die Fettabdeckung als Hilfsmerkmal für die Frühreife und somit als Zielgrösse in unserem multivariaten Modell verwenden wollen. 
 
 
 ### Differentielles Alter (DAGE)
